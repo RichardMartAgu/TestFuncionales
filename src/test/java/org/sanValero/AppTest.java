@@ -5,6 +5,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -16,14 +17,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppTest {
 
+    private WebDriver driver;
 
     @Test
     public void ListProdictTest() {
 
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
+        ChromeOptions options = new ChromeOptions();
 
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
 
         driver.navigate().to("https://www.lidl.es/es/herramientas-electricas/c92");
 
@@ -40,9 +42,8 @@ public class AppTest {
 @Test
     public void VerifyTittle() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
 
         driver.navigate().to("https://www.lidl.es/es/herramientas-electricas/c92");
 
@@ -68,9 +69,8 @@ public class AppTest {
     @Test
     public void testAddItemToCart() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
-
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
 
         driver.navigate().to("https://www.lidl.es/es/taladro-de-columna-400-w/p36291?fromRecommendation=true&scenario=last_seen&list=reco_homepage_last_seen&position=1");
 

@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
@@ -12,16 +13,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class patronPageObject {
+public class PatronPageObjectTest {
 
     private WebDriver driver;
     private WebDriverWait wait;
 
-    private By cookieButton = By.className("cookie-alert-extended-button");
-    private By searchBox = By.name("query");
-    private By addToCartButton = By.id("add-to-cart");
-    private By successText = By.cssSelector("h4.basket-overlay__title");
-    private By links = By.className("lazy");
+    private final By cookieButton = By.className("cookie-alert-extended-button");
+    private final By searchBox = By.name("query");
+    private final By addToCartButton = By.id("add-to-cart");
+    private final By successText = By.cssSelector("h4.basket-overlay__title");
+    private final By links = By.className("lazy");
 
     public void webDriver(WebDriver driver) {
         this.driver = driver;
@@ -53,17 +54,13 @@ public class patronPageObject {
         assertEquals("¡Buena elección! El artículo ha sido añadido a tu cesta de la compra.", driver.findElement(successText).getText());
     }
 
-
-
-
-
     @Test
     public void ListProductTest() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
 
-        patronPageObject pageObject = new patronPageObject();
+        PatronPageObjectTest pageObject = new PatronPageObjectTest();
 
         pageObject.webDriver(driver);
 
@@ -81,10 +78,10 @@ public class patronPageObject {
     @Test
     public void verifyTitle() {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        driver = new ChromeDriver(options);
 
-        patronPageObject page = new patronPageObject();
+        PatronPageObjectTest page = new PatronPageObjectTest();
 
         page.webDriver(driver);
 
@@ -101,23 +98,29 @@ public class patronPageObject {
         driver.quit();
     }
 
-
-        @Test
+    @Test
     public void testAddItemToCart() {
 
-        patronPageObject pageObject = new patronPageObject();
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
 
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        driver = new ChromeDriver(options);
+
+        PatronPageObjectTest pageObject = new PatronPageObjectTest();
+
+
         pageObject.webDriver(driver);
+
         pageObject.goToPage("https://www.lidl.es/es/taladro-de-columna-400-w/p36291?fromRecommendation=true&scenario=last_seen&list=reco_homepage_last_seen&position=1");
+
         pageObject.acceptCookies();
 
         driver.navigate().refresh();
+
         pageObject.addItemToCart();
+
         driver.quit();
 
     }
-
 }
 
