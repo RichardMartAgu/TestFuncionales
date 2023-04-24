@@ -22,6 +22,7 @@ public class AppTest {
 
         WebDriver driver = new ChromeDriver();
 
+
         driver.navigate().to("https://www.lidl.es/es/herramientas-electricas/c92");
 
         WebElement cookieButton  = driver.findElement(By.className("cookie-alert-extended-button"));
