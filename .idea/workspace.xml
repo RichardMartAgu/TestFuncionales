@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074a4bea-32d1-49d9-9733-920a03fae7a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/sanValero/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" afterDir="false" />
+    <list default="true" id="074a4bea-32d1-49d9-9733-920a03fae7a6" name="Changes" comment="añadir test titulo resultado en web lidl">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +41,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.AppTest">
+  <component name="RunManager" selected="JUnit.AppTest.testAddItemToCart">
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestFuncionales" />
       <extension name="coverage">
@@ -96,10 +89,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.testAddItemToCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestFuncionales" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sanValero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.sanValero" />
+      <option name="MAIN_CLASS_NAME" value="org.sanValero.AppTest" />
+      <option name="METHOD_NAME" value="testAddItemToCart" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.testAddItemToCart" />
         <item itemvalue="JUnit.AppTest.VerifyTittle" />
+        <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.ListProdictTest" />
       </list>
     </recent_temporary>
@@ -113,6 +123,65 @@
       <option name="presentableId" value="Default" />
       <updated>1682250148302</updated>
     </task>
+    <task id="LOCAL-00001" summary="Testear una lista de productos en web lidl">
+      <created>1682335419685</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682335419685</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Testear una lista de productos en web lidl">
+      <created>1682335572163</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682335572163</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Testear una lista de productos en web lidl">
+      <created>1682335804403</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682335804403</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Testear una lista de productos en web lidl">
+      <created>1682335901925</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682335901925</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Testear una lista de productos en web lidl">
+      <created>1682335962803</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682335962803</updated>
+    </task>
+    <task id="LOCAL-00006" summary="añadir test titulo resultado en web lidl">
+      <created>1682336060027</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682336060027</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Testear una lista de productos en web lidl" />
+    <MESSAGE value="añadir test titulo resultado en web lidl" />
+    <option name="LAST_COMMIT_MESSAGE" value="añadir test titulo resultado en web lidl" />
   </component>
 </project>
