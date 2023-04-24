@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PatronPageObjectTest {
 
-
     private WebDriver driver;
     private WebDriverWait wait;
 
