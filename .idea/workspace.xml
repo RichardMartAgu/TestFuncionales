@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074a4bea-32d1-49d9-9733-920a03fae7a6" name="Changes" comment="añadir patronPageObject a los test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/sanValero/patronPageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sanValero/patronPageObject.java" afterDir="false" />
-    </list>
+    <list default="true" id="074a4bea-32d1-49d9-9733-920a03fae7a6" name="Changes" comment="pruebas SuperLinter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +77,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatronPageObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatronPageObjectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestFuncionales" />
       <extension name="coverage">
         <pattern>
@@ -90,13 +86,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.sanValero" />
-      <option name="MAIN_CLASS_NAME" value="org.sanValero.PatronPageObject" />
+      <option name="MAIN_CLASS_NAME" value="org.sanValero.PatronPageObjectTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatronPageObject.testAddItemToCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatronPageObjectTest.testAddItemToCart" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestFuncionales" />
       <extension name="coverage">
         <pattern>
@@ -105,14 +101,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.sanValero" />
-      <option name="MAIN_CLASS_NAME" value="org.sanValero.PatronPageObject" />
+      <option name="MAIN_CLASS_NAME" value="org.sanValero.PatronPageObjectTest" />
       <option name="METHOD_NAME" value="testAddItemToCart" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PatronPageObject.verifyTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PatronPageObjectTest.verifyTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestFuncionales" />
       <extension name="coverage">
         <pattern>
@@ -121,7 +117,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.sanValero" />
-      <option name="MAIN_CLASS_NAME" value="org.sanValero.PatronPageObject" />
+      <option name="MAIN_CLASS_NAME" value="org.sanValero.PatronPageObjectTest" />
       <option name="METHOD_NAME" value="verifyTitle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -130,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PatronPageObject" />
+        <item itemvalue="JUnit.PatronPageObjectTest" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.ListProdictTest" />
-        <item itemvalue="JUnit.PatronPageObject.verifyTitle" />
-        <item itemvalue="JUnit.PatronPageObject.testAddItemToCart" />
+        <item itemvalue="JUnit.PatronPageObjectTest.verifyTitle" />
+        <item itemvalue="JUnit.PatronPageObjectTest.testAddItemToCart" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +199,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682352175518</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="añadir patronPageObject a los test">
+      <created>1682359769017</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682359769017</updated>
+    </task>
+    <task id="LOCAL-00010" summary="añadir patronPageObject a los test">
+      <created>1682359784791</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682359784791</updated>
+    </task>
+    <task id="LOCAL-00011" summary="pruebas SuperLinter">
+      <created>1682359855286</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682359855286</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,7 +238,9 @@
     <MESSAGE value="Testear una lista de productos en web lidl" />
     <MESSAGE value="añadir test titulo resultado en web lidl" />
     <MESSAGE value="añadir test añadir al carrito en web lidl" />
+    <MESSAGE value="editar patronPageObject a los test" />
     <MESSAGE value="añadir patronPageObject a los test" />
-    <option name="LAST_COMMIT_MESSAGE" value="añadir patronPageObject a los test" />
+    <MESSAGE value="pruebas SuperLinter" />
+    <option name="LAST_COMMIT_MESSAGE" value="pruebas SuperLinter" />
   </component>
 </project>
