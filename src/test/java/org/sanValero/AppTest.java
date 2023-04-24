@@ -1,7 +1,5 @@
 package org.sanValero;
 
-
-
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.By;
@@ -22,7 +20,6 @@ public class AppTest {
 
         WebDriver driver = new ChromeDriver();
 
-
         driver.navigate().to("https://www.lidl.es/es/herramientas-electricas/c92");
 
         WebElement cookieButton  = driver.findElement(By.className("cookie-alert-extended-button"));
@@ -32,6 +29,33 @@ public class AppTest {
         assertEquals (links.size(), 8);
 
         System.out.println("Número de enlaces en la página: " + links.size());
+
+        driver.quit();
+
+    }
+@Test
+    public void VerifyTittle() {
+
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.navigate().to("https://www.lidl.es/es/herramientas-electricas/c92");
+
+        WebElement cookieButton  = driver.findElement(By.className("cookie-alert-extended-button"));
+        cookieButton .click();
+
+        WebElement searchBox = driver.findElement(By.name("query"));
+        searchBox.sendKeys("taladros");
+        searchBox.submit();
+
+        String title = driver.getTitle();
+        System.out.println(title);
+
+        String expectedTitle = "Resultado de búsqueda | Lidl";
+        String actualTitle = driver.getTitle();
+        assertEquals(expectedTitle, actualTitle);
+
 
         driver.quit();
 
