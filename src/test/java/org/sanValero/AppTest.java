@@ -7,14 +7,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 import java.time.Duration;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppTest {
+
+
     @Test
     public void ListProdictTest() {
+
 
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\richa\\OneDrive\\Escritorio\\Instalacion\\chromedriver.exe");
 
@@ -22,13 +27,12 @@ public class AppTest {
 
         driver.navigate().to("https://www.lidl.es/es/herramientas-electricas/c92");
 
+
         WebElement cookieButton  = driver.findElement(By.className("cookie-alert-extended-button"));
         cookieButton .click();
 
         List<WebElement> links = driver.findElements(By.className("lazy"));
         assertEquals (links.size(), 8);
-
-        System.out.println("Número de enlaces en la página: " + links.size());
 
         driver.quit();
 
