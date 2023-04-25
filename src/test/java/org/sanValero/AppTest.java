@@ -75,6 +75,7 @@ public class AppTest {
         driver.navigate().to("https://www.lidl.es/es/taladro-de-columna-400-w/p36291?fromRecommendation=true&scenario=last_seen&list=reco_homepage_last_seen&position=1");
 
         int seconds = 10;
+
         Duration duration = Duration.ofSeconds(seconds);
         WebDriverWait wait = new WebDriverWait(driver, duration);
 
