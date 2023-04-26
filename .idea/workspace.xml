@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="074a4bea-32d1-49d9-9733-920a03fae7a6" name="Changes" comment="pruebas SuperLinter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.PatronPageObjectTest,ListProductTest and 2 more">
+  <component name="RunManager" selected="JUnit.AppTest">
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestFuncionales" />
       <extension name="coverage">
@@ -125,8 +124,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PatronPageObjectTest,ListProductTest and 2 more" />
         <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.PatronPageObjectTest,ListProductTest and 2 more" />
         <item itemvalue="JUnit.PatronPageObjectTest" />
         <item itemvalue="JUnit.AppTest.ListProdictTest" />
         <item itemvalue="JUnit.PatronPageObjectTest.verifyTitle" />
@@ -310,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682450156990</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="pruebas SuperLinter">
+      <created>1682452180225</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1682452180226</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
