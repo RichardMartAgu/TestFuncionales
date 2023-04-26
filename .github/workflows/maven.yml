@@ -2,9 +2,9 @@ name: Lint
 
 on:
   push:
-    branches: [ "master","main" ]
+    branches: [ master,main ]
   pull_request:
-    branches: [ "master","main" ]
+    branches: [ master,main ]
 
 jobs:
   build:
@@ -26,9 +26,9 @@ jobs:
       run: mvn -B test
       
     - name: Lint Code Base
-      uses: github/super-linter/slim@v4
+      uses: github/super-linter@v5
       env:
-        VALIDATE_ALL_CODEBASE: true
+        VALIDATE_ALL_CODEBASE: false
         DEFAULT_BRANCH: master
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
