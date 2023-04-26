@@ -14,12 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
   
-    - name: Build with Maven
-      run: mvn package --file pom.xml
-      
-    - name: Run tests
-      run: mvn -B test
-      
     - name: Lint Code Base
       uses: github/super-linter@v5
       env:
@@ -27,3 +21,8 @@ jobs:
         DEFAULT_BRANCH: master
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Build with Maven
+      run: mvn package --file pom.xml
+      
+    - name: Run tests
+      run: mvn -B test
