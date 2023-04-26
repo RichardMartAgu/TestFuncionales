@@ -10,9 +10,19 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: 17
+
+    - name: Set up Maven
+      uses: apache/maven@v3.8.3
+      with:
+        java-version: 17
+        maven-version: 3.8.3
   
     - name: Lint Code Base
       uses: github/super-linter@v5
