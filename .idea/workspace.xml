@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="074a4bea-32d1-49d9-9733-920a03fae7a6" name="Changes" comment="pruebas SuperLinter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/sanValero/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/sanValero/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sanValero/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/sanValero/PatronPageObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/sanValero/PatronPageObjectTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682452180226</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="pruebas SuperLinter">
+      <created>1682525725581</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1682525725581</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

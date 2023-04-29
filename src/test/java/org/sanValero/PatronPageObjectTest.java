@@ -10,118 +10,117 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/** Copia del ejercicion anterior pero usando el: Patron Page Object. */
 public class PatronPageObjectTest {
 
+  private WebDriver driver;
+  private WebDriverWait wait;
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+  private final By cookieButton = By.className("cookie-alert-extended-button");
+  private final By searchBox = By.name("query");
+  private final By addToCartButton = By.id("add-to-cart");
+  private final By successText = By.cssSelector("h4.basket-overlay__title");
+  private final By links = By.className("lazy");
 
-    private final By cookieButton = By.className("cookie-alert-extended-button");
-    private final By searchBox = By.name("query");
-    private final By addToCartButton = By.id("add-to-cart");
-    private final By successText = By.cssSelector("h4.basket-overlay__title");
-    private final By links = By.className("lazy");
+  /** Instancia el driver */
+  public void webDriver(WebDriver driver) {
+    this.driver = driver;
+    this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+  }
+  /** Navega a la URL que le metemos por parámetro */
+  public void goToPage(String url) {
+    driver.navigate().to(url);
+  }
+  /** Acepta los cookies */
+  public void acceptCookies() {
+    driver.findElement(cookieButton).click();
+  }
+  /** Hace una búsqueda de lo introducido por parametro */
+  public void searchForProduct(String query) {
+    WebElement searchField = driver.findElement(searchBox);
+    searchField.sendKeys(query);
+    searchField.submit();
+  }
+  /** Busca una lista de elementos */
+  public int getNumberOfLinks() {
+    List<WebElement> linkList = driver.findElements(links);
+    return linkList.size();
+  }
+  /** Añade un objeto al carrito */
+  public void addItemToCart() {
+    driver.findElement(addToCartButton).click();
+    wait.until(ExpectedConditions.visibilityOfElementLocated(successText));
+    assertEquals(
+        "¡Buena elección! El artículo ha sido añadido a tu cesta de la compra.",
+        driver.findElement(successText).getText());
+  }
+  /** Test 1 busca una lista y revisa que los elementos son los mismos que contados a mano */
+  @Test
+  public void ListProductTest() {
 
-    public void webDriver(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+    ChromeOptions options = new ChromeOptions();
+    driver = new ChromeDriver(options);
 
-    public void goToPage(String url) {
-        driver.navigate().to(url);
-    }
+    PatronPageObjectTest pageObject = new PatronPageObjectTest();
 
-    public void acceptCookies() {
-        driver.findElement(cookieButton).click();
-    }
+    pageObject.webDriver(driver);
 
-    public void searchForProduct(String query) {
-        WebElement searchField = driver.findElement(searchBox);
-        searchField.sendKeys(query);
-        searchField.submit();
-    }
+    pageObject.goToPage("https://www.lidl.es/es/herramientas-electricas/c92");
 
-    public int getNumberOfLinks() {
-        List<WebElement> linkList = driver.findElements(links);
-        return linkList.size();
-    }
+    pageObject.acceptCookies();
 
-    public void addItemToCart() {
-        driver.findElement(addToCartButton).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(successText));
-        assertEquals("¡Buena elección! El artículo ha sido añadido a tu cesta de la compra.", driver.findElement(successText).getText());
-    }
+    int numberOfLinks = pageObject.getNumberOfLinks();
 
-    @Test
-    public void ListProductTest() {
+    assertEquals(8, numberOfLinks);
 
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
+    driver.quit();
+  }
+  /** Test2 Hace una búsqueda en concreto y confirma el título de la búsqueda utilizada */
+  @Test
+  public void verifyTitle() {
 
-        PatronPageObjectTest pageObject = new PatronPageObjectTest();
+    ChromeOptions options = new ChromeOptions();
+    driver = new ChromeDriver(options);
 
-        pageObject.webDriver(driver);
+    PatronPageObjectTest page = new PatronPageObjectTest();
 
-        pageObject.goToPage("https://www.lidl.es/es/herramientas-electricas/c92");
+    page.webDriver(driver);
 
-        pageObject.acceptCookies();
+    page.goToPage("https://www.lidl.es/es/herramientas-electricas/c92");
+    page.acceptCookies();
 
-        int numberOfLinks = pageObject.getNumberOfLinks();
+    page.searchForProduct("taladros");
 
-        assertEquals(8, numberOfLinks);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    wait.until(ExpectedConditions.titleIs("Resultado de búsqueda | Lidl"));
 
-        driver.quit();
-    }
+    assertEquals("Resultado de búsqueda | Lidl", driver.getTitle());
 
-    @Test
-    public void verifyTitle() {
+    driver.quit();
+  }
+  /** Test 1 busca una lista y revisa que los elementos son los mismos que contados a mano */
+  @Test
+  public void testAddItemToCart() {
 
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
+    ChromeOptions options = new ChromeOptions();
 
-        PatronPageObjectTest page = new PatronPageObjectTest();
+    driver = new ChromeDriver(options);
 
-        page.webDriver(driver);
+    PatronPageObjectTest pageObject = new PatronPageObjectTest();
 
-        page.goToPage("https://www.lidl.es/es/herramientas-electricas/c92");
-        page.acceptCookies();
+    pageObject.webDriver(driver);
 
-        page.searchForProduct("taladros");
+    pageObject.goToPage(
+        "https://www.lidl.es/es/taladro-de-columna-400-w/p36291?fromRecommendation=true&scenario=last_seen&list=reco_homepage_last_seen&position=1");
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.titleIs("Resultado de búsqueda | Lidl"));
+    pageObject.acceptCookies();
 
-        assertEquals("Resultado de búsqueda | Lidl", driver.getTitle());
+    driver.navigate().refresh();
 
-        driver.quit();
-    }
+    pageObject.addItemToCart();
 
-    @Test
-    public void testAddItemToCart() {
-
-
-        ChromeOptions options = new ChromeOptions();
-
-        driver = new ChromeDriver(options);
-
-        PatronPageObjectTest pageObject = new PatronPageObjectTest();
-
-
-        pageObject.webDriver(driver);
-
-        pageObject.goToPage("https://www.lidl.es/es/taladro-de-columna-400-w/p36291?fromRecommendation=true&scenario=last_seen&list=reco_homepage_last_seen&position=1");
-
-        pageObject.acceptCookies();
-
-        driver.navigate().refresh();
-
-        pageObject.addItemToCart();
-
-        driver.quit();
-
-    }
+    driver.quit();
+  }
 }
-
